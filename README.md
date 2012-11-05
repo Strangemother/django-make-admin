@@ -8,7 +8,25 @@ file for you app.
 
 ##Installation:
 
+This is a manage.py executed management script.
 Add the file make_admin.py to your chosen management app folder.
+
+*Or with heavy lifting*
+
+	+ root
+	|
+	|---- app_name
+	      |
+	      |---- __init__.py
+	      |---- views.py
+	      |---- models.py
+	      |---- management
+	      		|
+	      		|---- __init__.py
+	      		|---- commands
+	      			  |---- __init__.py
+	      			  |---- make_admin.py
+
 
 ##Usage:
 
