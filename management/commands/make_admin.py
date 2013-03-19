@@ -159,7 +159,7 @@ class Command(BaseCommand):
         _i = ''
         if inert:
             _i = '#'
-        for f in self.fields(model):
+        for f in self.many_to_many_fields(model):
             if f.name in exclude:
                 pass
             else:
@@ -201,6 +201,9 @@ class Command(BaseCommand):
 
     def fields(self, model):
         return model._meta.fields
+
+    def many_to_many_fields(self, model):
+        return model._meta._many_to_many()
 
     def import_models_string(self, app):
         '''
